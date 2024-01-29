@@ -1,0 +1,56 @@
+﻿<Page x:Class="BankClient.AccountPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BankClient"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AccountPage">
+
+    <Grid Background="#FF59C3FF">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Column="0" Grid.RowSpan="9" Fill="#FF011B9A"/>
+        <Rectangle Grid.Column="0" Grid.RowSpan="9" Fill="#FF011B9A"/>
+        <Button x:Name="AvatarButton" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Margin="5" Background="{x:Null}" BorderBrush="{x:Null}" Click="AvatarButton_Click">
+            <Image x:Name="avatarImage" Source="Images/avatar.png"  />
+        </Button>
+        <Button x:Name="PortfolioButton" Grid.Row="3" Grid.RowSpan="2" Grid.Column="0" Margin="5" Background="{x:Null}" BorderBrush="{x:Null}" Click="PortfolioButton_Click" >
+            <Image x:Name="portfolioImage" Source="Images/portfolio.png"  />
+        </Button>
+        <Button x:Name="ClientButton" Grid.Row="5" Grid.Column="0" Margin="5" Background="{x:Null}" BorderBrush="{x:Null}" Click="ClientButton_Click">
+            <Image x:Name="houseImage" Source="Images/house.png"  />
+        </Button>
+        <Button x:Name="CreditButton" Grid.Row="6" Grid.Column="0" Margin="5" Background="{x:Null}" BorderBrush="{x:Null}" Click="CreditButton_Click">
+            <Image x:Name="bookImage" Source="Images/book.png"  />
+        </Button>
+        <Button x:Name="ExitButton" Grid.Row="8" Grid.Column="0" Margin="5" Background="{x:Null}" BorderBrush="{x:Null}" Click="ExitButton_Click">
+            <Image x:Name="exitImage" Source="Images/exit.png"/>
+        </Button>
+        <Image x:Name="avatarImage1" Source="Images/avatar.png" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="SurName" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text="Мельниченко" IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="20" TextAlignment="Center"/>
+        <TextBox x:Name="Name" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Text="Игорь" IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="20" TextAlignment="Center"/>
+        <TextBox x:Name="ThirdName" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Text="Дмитриевич" IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="20" TextAlignment="Center"/>
+        <TextBox x:Name="Pincode" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Text="3514" IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="20" TextAlignment="Center" Margin="20"/>
+        <TextBox x:Name="Passport" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Text="2516 246257" IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="20" TextAlignment="Center" Margin="20"/>
+        <DatePicker x:Name="BirthDate" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="20"  IsEnabled="False"/>
+        <Button x:Name="Redact" Content="редактировать" Grid.Column="2" Grid.Row="8" Grid.ColumnSpan="2" Margin="80,20" Background="#FF2734FF" Click="Redact_Click"/>
+    </Grid>
+</Page>

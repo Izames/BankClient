@@ -1,0 +1,55 @@
+﻿<Page x:Class="BankClient.CreditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BankClient"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CreditPage">
+
+    <Grid Background="#FF59C3FF">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Column="0" Grid.RowSpan="9" Fill="#FF011B9A"/>
+        <Button x:Name="AvatarButton" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Margin="5" Background="{x:Null}" BorderBrush="{x:Null}" Click="AvatarButton_Click">
+            <Image x:Name="avatarImage" Source="Images/avatar.png"  />
+        </Button>
+        <Button x:Name="PortfolioButton" Grid.Row="3" Grid.RowSpan="2" Grid.Column="0" Margin="5" Background="{x:Null}" BorderBrush="{x:Null}" Click="PortfolioButton_Click" >
+            <Image x:Name="portfolioImage" Source="Images/portfolio.png"  />
+        </Button>
+        <Button x:Name="ClientButton" Grid.Row="5" Grid.Column="0" Margin="5" Background="{x:Null}" BorderBrush="{x:Null}" Click="ClientButton_Click">
+            <Image x:Name="houseImage" Source="Images/house.png"  />
+        </Button>
+        <Button x:Name="CreditButton" Grid.Row="6" Grid.Column="0" Margin="5" Background="{x:Null}" BorderBrush="{x:Null}" Click="CreditButton_Click">
+            <Image x:Name="bookImage" Source="Images/book.png"  />
+        </Button>
+        <Button x:Name="ExitButton" Grid.Row="8" Grid.Column="0" Margin="5" Background="{x:Null}" BorderBrush="{x:Null}" Click="ExitButton_Click">
+            <Image x:Name="exitImage" Source="Images/exit.png"/>
+        </Button>
+        <Rectangle x:Name="document" Fill="White" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="7" Visibility="Hidden"/>
+        <TextBlock x:Name="BankAccount"  Text="4729582058371940" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" FontSize="20" TextAlignment="Center" Visibility="Hidden"/>
+        <TextBlock x:Name="Summ" Text="50000Р" Grid.Column="2" Grid.Row="3" FontSize="20" TextAlignment="Center" Visibility="Hidden"/>
+        <TextBlock x:Name="Procent" Text="5%" Grid.Column="3" Grid.Row="3" FontSize="20" TextAlignment="Center" Visibility="Hidden"/>
+        <TextBlock x:Name="PayPerMonth" Text="4250Р в месяц" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2" FontSize="20" TextAlignment="Center" Visibility="Hidden"/>
+        <TextBlock x:Name="remains" Text="51000Р" Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="2" FontSize="20" TextAlignment="Center" Visibility="Hidden"/>
+        <Button x:Name="CreateCredit" Content="Добавить заявку" Grid.Column="2" Grid.Row="5" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="40" Background="#FF0019FF" FontSize="22" Visibility="Hidden" Click="CreateCredit_Click"/>
+        <TextBlock x:Name="InfoCredit" Text="Заявка в обработке" Grid.Column="2" Grid.Row="5" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="40" FontSize="22" TextAlignment="Center" Visibility="Hidden"/>
+    </Grid>
+</Page>

@@ -1,0 +1,56 @@
+﻿<Page x:Class="BankClient.DebitCardPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BankClient"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DebitCardPage">
+
+    <Grid Background="#FF59C3FF">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Column="0" Grid.RowSpan="9" Fill="#FF011B9A"/>
+        <Button x:Name="AvatarButton" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Margin="5" Background="{x:Null}" BorderBrush="{x:Null}" Click="AvatarButton_Click">
+            <Image x:Name="avatarImage" Source="Images/avatar.png"  />
+        </Button>
+        <Button x:Name="PortfolioButton" Grid.Row="3" Grid.RowSpan="2" Grid.Column="0" Margin="5" Background="{x:Null}" BorderBrush="{x:Null}" Click="PortfolioButton_Click" >
+            <Image x:Name="portfolioImage" Source="Images/portfolio.png"  />
+        </Button>
+        <Button x:Name="ClientButton" Grid.Row="5" Grid.Column="0" Margin="5" Background="{x:Null}" BorderBrush="{x:Null}" Click="ClientButton_Click">
+            <Image x:Name="houseImage" Source="Images/house.png"  />
+        </Button>
+        <Button x:Name="CreditButton" Grid.Row="6" Grid.Column="0" Margin="5" Background="{x:Null}" BorderBrush="{x:Null}" Click="CreditButton_Click">
+            <Image x:Name="bookImage" Source="Images/book.png"  />
+        </Button>
+        <Button x:Name="ExitButton" Grid.Row="8" Grid.Column="0" Margin="5" Background="{x:Null}" BorderBrush="{x:Null}" Click="ExitButton_Click">
+            <Image x:Name="exitImage" Source="Images/exit.png"/>
+        </Button>
+        <ListBox x:Name="cards" Grid.Column="4" Grid.Row="4" Grid.RowSpan="5" FontSize="18" Background="#FFC6C1C1" Margin="8,0,0,0" SelectionChanged="cards_SelectionChanged"/>
+        <Button x:Name="CreateCard" Grid.Column="4" Grid.Row="1" Grid.RowSpan="2" Margin="15" Background="#FF554CFF" Content="Добавить карту" FontSize="16" Click="CreateCard_Click"/>
+        <TextBlock x:Name="PinCode"  Grid.Column="2" Grid.Row="1" TextAlignment="Center" FontSize="20"/>
+        <Rectangle Grid.Column="1" Grid.Row="3" Fill="#FF373737" Grid.ColumnSpan="3" Grid.RowSpan="4" Margin="40,0" Style="{DynamicResource RoundedRectangle}"/>
+        <TextBlock x:Name="CardNumber" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="4" Margin="40,0" TextAlignment="Center" FontSize="22" Foreground="#FFF9F9F9"/>
+        <TextBlock x:Name="EndDate" TextAlignment="Center" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" FontSize="18" Foreground="White"/>
+        <TextBlock x:Name="CVV" TextAlignment="Center" Grid.Row="5" Grid.Column="3" VerticalAlignment="Center" FontSize="18" Foreground="White"/>
+        <Button x:Name="Freeze" Content="Заморозить" Grid.Column="1" Grid.Row="7" Margin="20" Background="#FF075EFF" Click="Freeze_Click"/>
+        <Button x:Name="Block" Content="Заблокировать" Grid.Column="3" Grid.Row="7" Margin="20" Background="#FF0558F4" Click="Block_Click"/>
+    </Grid>
+</Page>
